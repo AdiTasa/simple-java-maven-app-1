@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'mvn test -Dtest=AppTest#setUpStreams'
+                sh 'mvn -Dtest=com.mycompany.app.AppTest#testAppMain test'
             }
             post {
                 always {
